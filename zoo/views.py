@@ -6,6 +6,16 @@ from rest_framework.response import Response
 from django.contrib.auth.models import User
 from rest_framework import permissions, renderers, viewsets
 from .permissions import IsOwnerOrReadOnly
+from rest_framework.decorators import api_view
+from rest_framework.reverse import reverse
+
+@api_view(['GET'])
+def api_root(request,format=None): #:8000/ de cikan linkleri tanimladik
+    return Response({
+        'Animal': reverse('animal-list', request=request, format=format),
+        'Cage': reverse('cage-list', request=request, format=format),
+
+    })
 
 
 class AnimalViewSet(viewsets.ModelViewSet):
@@ -17,6 +27,7 @@ class AnimalViewSet(viewsets.ModelViewSet):
     permission_classes = (
         permissions.IsAuthenticatedOrReadOnly,
         IsOwnerOrReadOnly,)
+
 
     @detail_route(renderer_classes=[renderers.StaticHTMLRenderer])
     def highlight(self, request, *args, **kwargs):
