@@ -13,6 +13,7 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
 
+
 @api_view(['GET'])
 def api_root(request,format=None): #:8000/ de cikan linkleri tanimladik
     return Response({
@@ -20,8 +21,6 @@ def api_root(request,format=None): #:8000/ de cikan linkleri tanimladik
         'Cage': reverse('cage-list', request=request, format=format),
 
     })
-
-
 
 
 
@@ -38,29 +37,23 @@ class AnimalViewSet(viewsets.ModelViewSet):
 
     def perform_update(self, serializer):
 
-
         x = self.get_object()# animal model
-        firs_cage = self.get_object().cid.pk
+        first_cage = self.get_object().cid.pk
 
-        serializer.save()
+        last_cage = self.request.POST['cid'][-2]
 
-        last_cage = self.get_object().cid.pk
+        newSizeOfGace = len( Cage.objects.filter(name=last_cage)[0].animals.all())+1
 
-        newSizeOfGace =  len( Cage.objects.filter(name=self.get_object().cid.pk)[0].animals.all())
-
-        size = Cage.objects.filter(name=self.get_object().cid.pk)[0].size
+        size = Cage.objects.filter(name=last_cage)[0].size
 
         if newSizeOfGace <= size:
-            Cage.objects.filter(name=firs_cage)[0].size-=1
+            Cage.objects.filter(name=first_cage)[0].size-=1
+            import pdb;pdb.set_trace()
+            serializer.save()
         else:
-            x.cid.pk = firs_cage
+            #x.cid.pk = first_cage
 
             return HttpResponse('The cage is full')
-
-        import pdb;
-        pdb.set_trace()
-
-        serializer.save()
 
 
 
