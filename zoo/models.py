@@ -10,6 +10,7 @@ class Cage(models.Model):
     name = models.CharField(max_length=20, null=True, blank=False, unique=True)
     size = models.IntegerField(null=True,blank=False)
     highlighted = models.TextField(null=True)
+    owner = models.ForeignKey('auth.User', related_name='Cage', on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.name
@@ -21,6 +22,7 @@ class Animal(models.Model):
     type = models.CharField(max_length=30,null=True, blank=False, choices=choices )
     cid = models.ForeignKey(Cage, related_name='animals' ,on_delete=models.CASCADE , null=False)
     highlighted = models.TextField(null=True)
+    owner = models.ForeignKey('auth.User', related_name='Animal', on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.name

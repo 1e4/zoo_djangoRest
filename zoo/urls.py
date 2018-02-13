@@ -4,8 +4,7 @@ from . views import AnimalViewSet,CageViewSet, UserViewSet
 from rest_framework import renderers
 
 Animal_list = AnimalViewSet.as_view({
-
-    'put': 'update',
+    'get': 'retrieve',
      })
 
 Animal_detail = AnimalViewSet.as_view({
