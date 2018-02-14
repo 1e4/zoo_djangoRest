@@ -4,8 +4,6 @@
     <list default="true" id="f6601a55-7396-4be6-b6ca-37636f0a9384" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/animals/settings.py" afterPath="$PROJECT_DIR$/animals/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zoo/models.py" afterPath="$PROJECT_DIR$/zoo/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zoo/views.py" afterPath="$PROJECT_DIR$/zoo/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,13 +42,17 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zoo/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="58" column="31" lean-forward="false" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+            <state relative-caret-position="369">
+              <caret line="64" column="17" lean-forward="true" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
               <folding>
-                <element signature="e#1#32#0" expanded="true" />
-                <element signature="e#583#746#0" expanded="false" />
-                <element signature="e#4383#4838#0" expanded="false" />
-                <element signature="e#4895#4962#0" expanded="false" />
+                <element signature="e#530#693#0" expanded="false" />
+                <element signature="e#1561#3263#0" expanded="false" />
+                <element signature="e#3962#5494#0" expanded="false" />
+                <element signature="e#4303#4745#0" expanded="false" />
+                <element signature="e#4855#5257#0" expanded="false" />
+                <element signature="e#5856#5927#0" expanded="false" />
+                <element signature="e#5976#6431#0" expanded="false" />
+                <element signature="e#6488#6555#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -59,8 +61,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zoo/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="38" column="32" lean-forward="true" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+            <state relative-caret-position="336">
+              <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
               <folding>
                 <element signature="e#1#29#0" expanded="true" />
               </folding>
@@ -77,6 +79,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>name</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -87,9 +94,9 @@
         <option value="$PROJECT_DIR$/zoo/permissions.py" />
         <option value="$PROJECT_DIR$/animals/urls.py" />
         <option value="$PROJECT_DIR$/zoo/urls.py" />
-        <option value="$PROJECT_DIR$/zoo/serializers.py" />
-        <option value="$PROJECT_DIR$/zoo/models.py" />
         <option value="$PROJECT_DIR$/animals/settings.py" />
+        <option value="$PROJECT_DIR$/zoo/models.py" />
+        <option value="$PROJECT_DIR$/zoo/serializers.py" />
         <option value="$PROJECT_DIR$/zoo/views.py" />
       </list>
     </option>
@@ -247,10 +254,14 @@
         <state relative-caret-position="391">
           <caret line="32" column="45" lean-forward="true" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
           <folding>
-            <element signature="e#1#32#0" expanded="true" />
-            <element signature="e#583#746#0" expanded="false" />
-            <element signature="e#4383#4838#0" expanded="false" />
-            <element signature="e#4895#4962#0" expanded="false" />
+            <element signature="e#530#693#0" expanded="false" />
+            <element signature="e#1561#3263#0" expanded="false" />
+            <element signature="e#3962#5494#0" expanded="false" />
+            <element signature="e#4303#4745#0" expanded="false" />
+            <element signature="e#4855#5257#0" expanded="false" />
+            <element signature="e#5856#5927#0" expanded="false" />
+            <element signature="e#5976#6431#0" expanded="false" />
+            <element signature="e#6488#6555#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -300,10 +311,14 @@
         <state relative-caret-position="442">
           <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
           <folding>
-            <element signature="e#1#32#0" expanded="true" />
-            <element signature="e#583#746#0" expanded="false" />
-            <element signature="e#4383#4838#0" expanded="false" />
-            <element signature="e#4895#4962#0" expanded="false" />
+            <element signature="e#530#693#0" expanded="false" />
+            <element signature="e#1561#3263#0" expanded="false" />
+            <element signature="e#3962#5494#0" expanded="false" />
+            <element signature="e#4303#4745#0" expanded="false" />
+            <element signature="e#4855#5257#0" expanded="false" />
+            <element signature="e#5856#5927#0" expanded="false" />
+            <element signature="e#5976#6431#0" expanded="false" />
+            <element signature="e#6488#6555#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -323,10 +338,14 @@
         <state relative-caret-position="595">
           <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <element signature="e#1#32#0" expanded="true" />
-            <element signature="e#583#746#0" expanded="false" />
-            <element signature="e#4383#4838#0" expanded="false" />
-            <element signature="e#4895#4962#0" expanded="false" />
+            <element signature="e#530#693#0" expanded="false" />
+            <element signature="e#1561#3263#0" expanded="false" />
+            <element signature="e#3962#5494#0" expanded="false" />
+            <element signature="e#4303#4745#0" expanded="false" />
+            <element signature="e#4855#5257#0" expanded="false" />
+            <element signature="e#5856#5927#0" expanded="false" />
+            <element signature="e#5976#6431#0" expanded="false" />
+            <element signature="e#6488#6555#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -409,16 +428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zoo/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="38" column="32" lean-forward="true" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
-          <folding>
-            <element signature="e#1#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zoo/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -429,15 +438,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/zoo/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+          <folding>
+            <element signature="e#1#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/zoo/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="58" column="31" lean-forward="false" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+        <state relative-caret-position="369">
+          <caret line="64" column="17" lean-forward="true" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
           <folding>
-            <element signature="e#1#32#0" expanded="true" />
-            <element signature="e#583#746#0" expanded="false" />
-            <element signature="e#4383#4838#0" expanded="false" />
-            <element signature="e#4895#4962#0" expanded="false" />
+            <element signature="e#530#693#0" expanded="false" />
+            <element signature="e#1561#3263#0" expanded="false" />
+            <element signature="e#3962#5494#0" expanded="false" />
+            <element signature="e#4303#4745#0" expanded="false" />
+            <element signature="e#4855#5257#0" expanded="false" />
+            <element signature="e#5856#5927#0" expanded="false" />
+            <element signature="e#5976#6431#0" expanded="false" />
+            <element signature="e#6488#6555#0" expanded="false" />
           </folding>
         </state>
       </provider>
