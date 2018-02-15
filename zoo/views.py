@@ -108,11 +108,7 @@ class AnimalViewSet(viewsets.ModelViewSet):
         else:
             raise Http404("Pick another cage.")
 
-    @detail_route(renderer_classes=[renderers.StaticHTMLRenderer])
-    def highlight(self, request, pk, *args, **kwargs ):
-        Animal = self.get_object()
-
-        return Response(Animal.highlighted)
+   
 
 class CageViewSet(viewsets.ModelViewSet):
 
