@@ -28,16 +28,18 @@ class AnimalViewSet(viewsets.ModelViewSet):
         IsOwnerOrReadOnly,)
 
     def perform_update(self, serializer):
-        if serializer.data['name'] == self.request.POST['name'] and serializer.data['age'] == self.request.POST['age'] \
-                and serializer.data['type'] == self.request.POST['type']:  # if name,age,type is the same for the animal
+
+
             last_cage = self.request.POST['cid'].replace("/","").replace("http:127.0.0.1:8000apicage","")  # the cage id we want to put animal in it
             c = Cage.objects.filter(id=last_cage)[0].animals.all()
+
             if c:  # if there are other animals in the cage
                 newSizeOfCage = len(c) + 1  # looking for the new size
                 size = Cage.objects.filter(id=last_cage)[0].size # the old size of the cage
 
                 value = 0
                 if newSizeOfCage <= size: # if there is a empty space
+
                     if self.request.POST['type'] == 'Lion':  # if the animal is lion
                         for ty in Cage.objects.filter(name=last_cage)[0].animals.all():  # look for is there any flamingo in the cage
                             if ty.type == 'Flamingo':
@@ -48,7 +50,7 @@ class AnimalViewSet(viewsets.ModelViewSet):
                             raise Http404("There is flamingo in the cage. Pick another cage.")
 
                     if self.request.POST['type'] == 'Flamingo':  # if the animal is flamingo
-                        for ty in Cage.objects.filter(name=last_cage)[0].animals.all():  # look for is there any lion in the cage
+                        for ty in c:  # look for is there any lion in the cage
                             if ty.type == 'Lion':
                                 value += 1
                         if value == 0:  # there is no lion
@@ -58,15 +60,13 @@ class AnimalViewSet(viewsets.ModelViewSet):
                     else:  # for other animals, just save it
                         serializer.save(owner=self.request.user)
 
-                else:  # if there is no emty space
+                else: # if there is no emty space
                     raise Http404("The cage is full. Pick an another cage")
             elif Cage.objects.filter(id=last_cage)[0].size >= 1:  # there is no other animal and there is space for an animal
                 serializer.save(owner=self.request.user)
             else:
                 raise Http404("Pick another cage.")
 
-        else: #age,name or type is not the same
-            raise Http404('Age, name or type is not the same for the animal')
 
 
 
@@ -74,7 +74,6 @@ class AnimalViewSet(viewsets.ModelViewSet):
 
         cage = self.request.POST['cid'].replace("/","").replace("http:127.0.0.1:8000apicage","") #cage's id
 
-        import pdb; pdb.set_trace()
         c = Cage.objects.filter(id=cage)[0].animals.all()
         if c:  # if there are other animals in the cage
             newSizeOfCage = len(c) + 1 # looking for the new size of the cage
@@ -102,7 +101,7 @@ class AnimalViewSet(viewsets.ModelViewSet):
                 else: # for other animals, just save it
                     serializer.save(owner=self.request.user)
 
-            else: # if there is no emty space
+            else: # if there is no empty space
                 raise Http404("The cage is full. Pick an another cage")
         elif Cage.objects.filter(id=cage)[0].size>=1: # there is no other animal and there is space for an animal
             serializer.save(owner=self.request.user)

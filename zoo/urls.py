@@ -1,7 +1,7 @@
+
 from django.conf.urls import url, include
-from . import views
 from . views import AnimalViewSet,CageViewSet, UserViewSet
-from rest_framework import renderers
+
 
 Animal_list = AnimalViewSet.as_view({
     'get': 'retrieve',
@@ -13,9 +13,6 @@ Animal_detail = AnimalViewSet.as_view({
     'patch': 'partial_update',
     'delete': 'destroy' })
 
-Animal_highlight = AnimalViewSet.as_view({
-    'get': 'highlight'
-}, renderer_classes=[renderers.StaticHTMLRenderer])
 
 Cage_list = CageViewSet.as_view({
     'get': 'retrieve',
@@ -29,9 +26,6 @@ Cage_detail = CageViewSet.as_view({
     'patch': 'partial_update',
     'delete': 'destroy' })
 
-Cage_highlight = CageViewSet.as_view({
-    'get': 'highlight'
-}, renderer_classes=[renderers.StaticHTMLRenderer])
 
 User_list = UserViewSet.as_view({
     'get': 'list'
